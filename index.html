@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiobjective Optimization Visualization</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Multiobjective Optimization Visualization</h1>
+    <div class="controls">
+        <label for="algorithm">Algorithm:</label>
+        <select id="algorithm">
+            <option value="nsga2">NSGA-II</option>
+            <option value="vega">VEGA</option>
+        </select>
+
+        <label for="populationSize">Population Size:</label>
+        <input type="number" id="populationSize" value="50" min="10" max="200">
+
+        <label for="mutationRate">Mutation Rate:</label>
+        <input type="number" id="mutationRate" value="0.1" step="0.01" min="0" max="1">
+
+        <button onclick="runAlgorithm()">Run Algorithm</button>
+        <button onclick="downloadResults()">Download Results</button>
+    </div>
+
+    <div id="metrics">
+        <p><strong>Generation:</strong> <span id="generationCount">0</span></p>
+        <p><strong>Population Size:</strong> <span id="currentPopulationSize">50</span></p>
+    </div>
+
+    <canvas id="paretoCanvas" width="800" height="500"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
