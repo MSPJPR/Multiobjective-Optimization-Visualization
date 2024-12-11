@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px 0;
+    margin: 0;
+    font-size: 2em;
+}
+
+.controls {
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #fff;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.controls label {
+    display: inline-block;
+    font-weight: bold;
+    margin: 10px 5px;
+}
+
+.controls select,
+.controls input {
+    padding: 8px;
+    margin: 5px 0 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100px;
+}
+
+.controls button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: background-color 0.3s;
+}
+
+.controls button:hover {
+    background-color: #218838;
+}
+
+#metrics {
+    margin: 20px auto;
+    font-size: 1.2em;
+    color: #555;
+}
+
+canvas {
+    border: 2px solid #007bff;
+    background-color: #fff;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 100%;
+}
+
+@media (max-width: 600px) {
+    .controls {
+        width: 90%;
+    }
+
+    .controls input,
+    .controls select {
+        width: 80px;
+    }
+
+    .controls button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    canvas {
+        width: 95%;
+    }
+}
